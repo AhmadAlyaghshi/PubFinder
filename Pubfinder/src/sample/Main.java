@@ -38,7 +38,7 @@ import java.util.Objects;
 public class Main extends Application implements EventHandler<javafx.event.ActionEvent> {
 
     Button btn;
-    Label welcome, warning;
+    Label welcome, warning, noPub;
     Scene pubScene, pubPage;
     int pubId;
     public int id;
@@ -114,6 +114,7 @@ public class Main extends Application implements EventHandler<javafx.event.Actio
         pubLayout.getChildren().add(pubs);
         pubLayout.getChildren().add(search);
         pubLayout.getChildren().add(searchInput);
+        noPub = new Label("No pubs found");
         searchForPubs();
 
         pubScene = new Scene(pubLayout ,1000, 600);
@@ -186,6 +187,7 @@ public class Main extends Application implements EventHandler<javafx.event.Actio
         header.setPreserveRatio(true);
     }
     public void searchForPubs(){
+        pubLayout.getChildren().remove(noPub);
         System.out.println("Search was pressed");
         int y = 0;
         int x = 0;
@@ -213,6 +215,10 @@ public class Main extends Application implements EventHandler<javafx.event.Actio
                     x = 0;
                 }
             }
+        }
+        if (pubs.getChildren().size() == 0){
+            pubLayout.getChildren().add(noPub);
+            noPub.setId("nopubs_message");
         }
 
         /* new elements */

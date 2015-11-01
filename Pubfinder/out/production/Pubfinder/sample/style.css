@@ -19,6 +19,13 @@
     -fx-font-family: helvetica;
     -fx-padding: 150px 20px 20px 20px;
 }
+#nopubs_message{
+    -fx-font-size: 60px;
+    -fx-color: #fff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: helvetica;
+}
 #pub-title{
     -fx-font-size: 60px;
     -fx-color: #fff;
