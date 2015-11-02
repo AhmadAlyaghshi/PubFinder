@@ -71,7 +71,9 @@ public class Main extends Application implements EventHandler<javafx.event.Actio
         /*Welcome scene*/
         StackPane layout = new StackPane();
         layout.setId("welcome");
-
+        
+        //test101
+        
         /*Button*/
         btn = new Button("ENTER");
         btn.setOnAction(this);
